@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="registrationForm.css">
+    <link rel="stylesheet" type="text/css" href="../css/registrationForm.css">
     <meta charset="UTF-8">
     <title>Registration</title>
+    <script defer src="../js/registrationValidation.js"></script>
 </head>
 
 <header> Registration Form </header>
 
-<h1> Registration Form </h1>
 <body>
-<form>
-    <fieldset>
+    <div class = "error"></div>
+    <div class= "wrap">
+    <h1> User Input Form </h1>
+<form >
+    <div class = "username-input">
         <label for="username-input"> Username: </label>
         <input type= "text" id= "username-input" name="username-input"/>
+    </div>
         <br />
+    <div class = "password-input">
         <label for="password-input"> Password: </label>
         <input type= "password" id= "password-input" name="password-input"/>
+    </div>
         <br />
+
+    <div class = "password-confirmation-input">
         <label for="password-confirmation-input"> Confirm Password: </label>
         <input type= "password" id= "password-confirmation-input" name="password-input"/>
+    </div>
         <br />
+    <div class= "email-input">
         <label for="email-input"> Email: </label>
-        <input type="email" id="email-input" name="email-input"/>
+        <input type="email" id="email-input" name="email-input" required/>
+    </div>
         <br />
-        <input type="checkbox" id="age-verification" name="age-verification">
+    <div class = "checkboxes">
+        <input type="checkbox" id="age-verification" name="age-verification" required>
         <label for="age-verification"> Accept that you are 13+ of age: </label>
         <br />
-        <input type="checkbox" id="accept-TOS" name="accept-TOS">
+        <input type="checkbox" id="accept-TOS" name="accept-TOS" required>
         <label> Accept TOS and Privacy rules: </label>
         <a href="terms.of.service">TOS and privacy rules</a>
-    </fieldset>
+    </div>
     <br />
+<div class = "button">
     <button type="submit"> Submit </button>
+</div>
+</div>
 </form>
 </body>
 </html>
